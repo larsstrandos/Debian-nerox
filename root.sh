@@ -27,7 +27,7 @@ cd $builddir
 cp i3-gaps.desktop /usr/share/xsessions/i3-gaps.desktop
 
 # Add base packages
-apt install unzip picom sddm rofi kitty thunar flameshot neofetch feh git lxpolkit lxappearance xorg rofi -y
+apt install unzip picom sddm rofi kitty thunar flameshot neofetch feh git lxpolkit lxappearance xorg rofi i3-y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
 
 # Fira Code Nerd Font variant needed
