@@ -23,6 +23,9 @@ ninja
 sudo ninja install
 cd $builddir
 
+# Make .desktop for i3-gaps
+cp i3-gaps.desktop /usr/share/xsessions/i3-gaps.desktop
+
 # Add base packages
 apt install unzip picom sddm rofi kitty thunar flameshot neofetch feh git lxpolkit lxappearance xorg rofi -y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls -y
@@ -36,7 +39,7 @@ fc-cache -vf
 
 cd $builddir
 mkdir -p /home/$username/.config
-cp .Xresources /home/$username
-cp .Xnord /home/$username
-cp -R dotfiles/* /home/$username/.config/
+#cp .Xresources /home/$username
+#cp .Xnord /home/$username
+#cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
