@@ -46,3 +46,5 @@ mkdir -p /home/$username/.config
 #cp .Xnord /home/$username
 #cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
+
+systemctl start sddm
