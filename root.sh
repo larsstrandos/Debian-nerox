@@ -5,6 +5,11 @@
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list
 
+username=$(id -u -n 1000)
+builddir=$(pwd)
+
+# Update packages list
+apt update
 
 # Add base packages
 apt install unzip picom sddm rofi kitty thunar flameshot neofetch feh git lxpolkit lxappearance xorg rofi -y
@@ -20,6 +25,7 @@ mkdir -p build && cd build
 meson --prefix /usr/local
 ninja
 sudo ninja install
+cd ../../
 
 # Fira Code Nerd Font variant needed
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.1.0/FiraCode.zip
