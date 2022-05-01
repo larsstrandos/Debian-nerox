@@ -26,6 +26,7 @@ sudo ninja install
 cd $builddir
 
 # Make .desktop for i3-gaps
+mkdir /usr/share/xsessions/
 cp i3-gaps.desktop /usr/share/xsessions/i3-gaps.desktop
 
 # Add base packages

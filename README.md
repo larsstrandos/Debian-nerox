@@ -1,5 +1,5 @@
 # Debian Nerox
-Debian customizations from Lars Strnados
+Debian customizations from Lars Strados
 
 ## Requirements
 _This install changes Debian to the SID (Dev) Branch_

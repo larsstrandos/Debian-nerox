@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=XSession
-Exec=/usr/bin/i3
+Exec=i3
 DesktopNames=i3-gaps
 Name=i3-gaps
 Comment=i3-gaps
