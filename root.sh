@@ -11,6 +11,8 @@ builddir=$(pwd)
 # Update packages list
 apt update
 
+# Upgrade all packages
+apt upgrade -y
 
 # Build and install i3-gaps
 apt purge i3
