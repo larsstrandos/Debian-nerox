@@ -29,7 +29,7 @@ mkdir /usr/share/xsessions/
 cp i3-gaps.desktop /usr/share/xsessions/i3-gaps.desktop
 
 # Add base packages
-apt install unzip picom sddm rofi kitty thunar flameshot polybar neofetch feh git lxpolkit lxappearance xorg rofi wget curl network-manager network-manager-fortisslvpn -y
+apt install unzip picom sddm rofi kitty thunar flameshot polybar neofetch feh git lxpolkit lxappearance xorg rofi wget curl network-manager network-manager-fortisslvpn snapd -y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls nextcloud-desktop
  thunderbird steam remmina remmina-plugin-rdp remmina-plugin-secret vlc -y
 
@@ -44,16 +44,13 @@ wget -O ./discord.deb "https://discordapp.com/api/download?platform=linux&format
 apt install ./discord.deb -y
 
 # Install Teams
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list'
 apt update
 apt install teams -y
 
 # Install Onlyoffice
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
-echo 'deb https://download.onlyoffice.com/repo/debian squeeze main' | sudo tee -a /etc/apt/sources.list.d/onlyoffice.list
-apt update
-apt install onlyoffice-desktopeditors -y
+snap install onlyoffice-desktopeditors -y
 
 # Install Vivaldi webbrowser
 apt update
@@ -65,19 +62,13 @@ apt install vivaldi-stable -y
 
 # Install Wine direct from WineHQ
 dpkg --add-architecture i386
+wget -qO- https://dl.winehq.org/wine-builds/winehq.key | apt-key add -
+apt install software-properties-common && sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/debian/ bullseye main'
 apt update
-apt -y install gnupg2 software-properties-common
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-apt-key add winehq.key
-apt-add-repository https://dl.winehq.org/wine-builds/debian/
-apt update
-wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11/Release.key | sudo apt-key add -    
-echo "deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_11 ./" | sudo tee /etc/apt/sources.list.d/wine-obs.list
-apt update
-apt install --install-recommends winehq-stable -y
+apt install --install-recommends winehq-devel -y
 
 # Install Vulkan drivers
-apt install libvulkan1 libvulkan1:i386
+apt install libvulkan1 libvulkan1:i386 -y
 
 # Install Lutris
 echo "deb http://download.opensuse.org/repositories/home:/strycore/Debian_11/ ./" | sudo tee /etc/apt/sources.list.d/lutris.list
