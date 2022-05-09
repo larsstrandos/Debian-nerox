@@ -73,3 +73,5 @@ chown -R $username:$username /home/$username
 # Enable needed packages
 systemctl enable NetworkManager.service
 systemctl enable sddm
+
+echo "Debian-nerox is installed! \nExit root and run the user.sh script."
