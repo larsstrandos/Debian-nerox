@@ -30,8 +30,7 @@ cp i3-gaps.desktop /usr/share/xsessions/i3-gaps.desktop
 
 # Add base packages
 apt install unzip picom sddm rofi kitty thunar flameshot polybar neofetch feh git lxpolkit lxappearance xorg rofi wget curl network-manager network-manager-fortisslvpn snapd debian-goodies xfce4-notifyd -y
-apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls nextcloud-desktop
- thunderbird steam remmina remmina-plugin-rdp remmina-plugin-secret vlc code vim -y
+apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls nextcloud-desktop thunderbird steam remmina remmina-plugin-rdp remmina-plugin-secret vlc code vim -y
 
 # Install vivaldi web browser
 wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | dd of=/usr/share/keyrings/vivaldi-browser.gpg
