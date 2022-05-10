@@ -75,7 +75,7 @@ cd $builddir
 mkdir -p /home/$username/.config
 #cp .Xresources /home/$username
 #cp .Xnord /home/$username
-#cp -R dotfiles/* /home/$username/.config/
+cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
 
 # Enable needed packages
