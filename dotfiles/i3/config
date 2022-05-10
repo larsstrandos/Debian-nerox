@@ -52,8 +52,8 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # Rofi launcher
-bindsym $mod+s exec --no-startup-id rofi -show combi -show-icons
-bindsym $mod+Shift+s exec --no-startup-id rofi -show filebrowser
+bindsym $mod+d exec --no-startup-id rofi -show combi -show-icons
+bindsym $mod+Shift+d exec --no-startup-id rofi -show filebrowser
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -286,14 +286,6 @@ assign [class="riotclientux.exe"]   $ws5
 ################ CONFIG ###################
 ########################################################
 
-input type:keyboard {
-  xkb_layout "no"
-  xkb_options "caps:backspace,shift:both_capslock"
-  xkb_numlock enabled
-}
-input type:pointer {
-  accel_profile "flat"
-}
 
 ########################################################
 ################ EXEC ###################
