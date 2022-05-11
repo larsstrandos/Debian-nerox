@@ -29,7 +29,7 @@ mkdir /usr/share/xsessions/
 cp i3-gaps.desktop /usr/share/xsessions/i3-gaps.desktop
 
 # Add base packages
-apt install unzip picom sddm rofi kitty thunar flameshot i3status neofetch feh git lxpolkit lxappearance xorg rofi wget curl network-manager network-manager-fortisslvpn snapd debian-goodies xfce4-notifyd -y
+apt install unzip picom sddm rofi kitty thunar flameshot i3status neofetch feh git lxpolkit lxappearance xorg rofi wget curl network-manager network-manager-fortisslvpn-gnome snapd debian-goodies xfce4-notifyd htop pipewire pipewire-pulse pavucontrol -y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls nextcloud-desktop thunderbird remmina remmina-plugin-rdp remmina-plugin-secret vlc vim -y
 
 # Install VSCode
@@ -77,9 +77,10 @@ mkdir -p /home/$username/.config
 #cp .Xnord /home/$username
 cp -R dotfiles/* /home/$username/.config/
 chown -R $username:$username /home/$username
+mkdir /home/$username/.wallpaper
 
 # Enable needed packages
-systemctl enable NetworkManager.service
+systemctl enable NetworkManager.service --now
 systemctl enable sddm
 
-echo "Debian-nerox is installed! \nExit root and run the user.sh script."
+echo "Debian-nerox root.sh is installed! Exit root and run the user.sh script."
