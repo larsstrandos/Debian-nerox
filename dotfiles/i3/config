@@ -176,27 +176,27 @@ set $ws19 workspace "19 "
 # change to DP-1
 # then DP-2
 # primary monitor
-bindsym $mod+1 $ws1; move workspace to output DP-2
-bindsym $mod+2 $ws2; move workspace to output DP-2
-bindsym $mod+3 $ws3; move workspace to output DP-2
-bindsym $mod+4 $ws4; move workspace to output DP-2
-bindsym $mod+5 $ws5; move workspace to output DP-2
-bindsym $mod+6 $ws6; move workspace to output DP-2
-bindsym $mod+7 $ws7; move workspace to output DP-2
-bindsym $mod+8 $ws8; move workspace to output DP-2
-bindsym $mod+9 $ws9; move workspace to output DP-2
+bindsym $mod+1 $ws1; move workspace to output DisplayPort-1
+bindsym $mod+2 $ws2; move workspace to output DisplayPort-1
+bindsym $mod+3 $ws3; move workspace to output DisplayPort-1
+bindsym $mod+4 $ws4; move workspace to output DisplayPort-1
+bindsym $mod+5 $ws5; move workspace to output DisplayPort-1
+bindsym $mod+6 $ws6; move workspace to output DisplayPort-1
+bindsym $mod+7 $ws7; move workspace to output DisplayPort-1
+bindsym $mod+8 $ws8; move workspace to output DisplayPort-1
+bindsym $mod+9 $ws9; move workspace to output DisplayPort-1
 
 # secondary monitor
 # change to DP-1
-bindsym $mod2+1 $ws11; move workspace to output DP-1
-bindsym $mod2+2 $ws12; move workspace to output DP-1
-bindsym $mod2+3 $ws13; move workspace to output DP-1
-bindsym $mod2+4 $ws14; move workspace to output DP-1
-bindsym $mod2+5 $ws15; move workspace to output DP-1
-bindsym $mod2+6 $ws16; move workspace to output DP-1
-bindsym $mod2+7 $ws17; move workspace to output DP-1
-bindsym $mod2+8 $ws18; move workspace to output DP-1
-bindsym $mod2+9 $ws19; move workspace to output DP-1
+bindsym $mod2+1 $ws11; move workspace to output DisplayPort-0
+bindsym $mod2+2 $ws12; move workspace to output DisplayPort-0
+bindsym $mod2+3 $ws13; move workspace to output DisplayPort-0
+bindsym $mod2+4 $ws14; move workspace to output DisplayPort-0
+bindsym $mod2+5 $ws15; move workspace to output DisplayPort-0
+bindsym $mod2+6 $ws16; move workspace to output DisplayPort-0
+bindsym $mod2+7 $ws17; move workspace to output DisplayPort-0
+bindsym $mod2+8 $ws18; move workspace to output DisplayPort-0
+bindsym $mod2+9 $ws19; move workspace to output DisplayPort-0
 
 # move focused container to
 # primary monitor
@@ -305,10 +305,6 @@ exec pavucontrol
 
 exec_always --no-startup-id picom
 exec_always --no-startup-id feh --bg-fill --randomize ~/.wallpaper/*
-
-# Launch Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 
 ########################################################
 ################ THEMES ###################

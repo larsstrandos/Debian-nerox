@@ -29,7 +29,7 @@ mkdir /usr/share/xsessions/
 cp i3-gaps.desktop /usr/share/xsessions/i3-gaps.desktop
 
 # Add base packages
-apt install unzip picom sddm rofi kitty thunar flameshot i3status neofetch feh git lxpolkit lxappearance xorg rofi wget curl network-manager network-manager-fortisslvpn-gnome snapd debian-goodies xfce4-notifyd htop pipewire pipewire-pulse pavucontrol -y
+apt install unzip picom sddm rofi kitty thunar flameshot i3status neofetch feh git lxpolkit lxappearance xorg rofi wget curl network-manager network-manager-gnome network-manager-fortisslvpn-gnome snapd debian-goodies xfce4-notifyd htop pipewire pipewire-pulse pavucontrol -y
 apt install papirus-icon-theme lxappearance fonts-noto-color-emoji fonts-firacode fonts-font-awesome libqt5svg5 qml-module-qtquick-controls nextcloud-desktop thunderbird remmina remmina-plugin-rdp remmina-plugin-secret vlc vim -y
 
 # Install VSCode
@@ -52,7 +52,7 @@ wget -qO- https://dl.winehq.org/wine-builds/winehq.key | gpg --dearmor > /etc/ap
 echo 'deb http://dl.winehq.org/wine-builds/debian/ bullseye main' > /etc/apt/sources.list.d/wine.list
 dpkg --add-architecture i386
 apt update
-apt install --install-recommends winehq-staging -y
+apt install --install-recommends winehq-staging zenity -y
 
 # Install Vulkan drivers
 apt install libvulkan1 mesa-vulkan-drivers vulkan-utils libgl1-mesa-glx:i386 libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i386 -y
