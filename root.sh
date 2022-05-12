@@ -74,10 +74,10 @@ echo 'alias halt="sudo halt"' >> /home/$username/.bashrc
 cd $builddir
 mkdir -p /home/$username/.config
 #cp .Xresources /home/$username
-#cp .Xnord /home/$username
+#cp .Xnord /home/$username  
 cp -R dotfiles/* /home/$username/.config/
+cp -R wallpaper/* /home/$username/.wallpaper/
 chown -R $username:$username /home/$username
-mkdir /home/$username/.wallpaper
 
 # Enable needed packages
 systemctl enable NetworkManager.service --now
